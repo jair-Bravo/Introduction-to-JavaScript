@@ -106,30 +106,32 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-
-
-
-
-
-
-
-function hungryDog(weight, age){
-    let x =0;
-    if (age >= 1){
-      if (weight <=5){
-        x=.05 
-    }else if(weight > 5 && weight <= 10){
-      x=.04
-    }else if(weight > 10 && weight <= 15){
-      x =.02
-    }
-  }if (age >= 1/6 && age <= 1/3){
-    x =.1;
-  }else if(age >= 1/6 && age <= 1/3){
-    x =.1;
-  }else if (age > 7/12 && age < 1){
-    return weight * x;
+function hungryDog(weight, age) {
+  let ibsOfFood = 0
+  if (age >= 1 &&  weight <= 5) {
+    return (weight * .05);
   }
+  else if (age >= 1 && weight >5 && weight <= 10) {
+    return (weight * .04);
+  }
+  else if (age >= 1 && weight >10 && weight <= 15) {
+    return (weight * .03);
+  }
+  else if (age >= 1 && weight > 15) {
+    return (weight * .02)
+  }
+
+  // puppies 
+  else if (age < 1 && age >= .84 && weight <= 5) {
+    return (weight * .02)
+  }
+  else if (age < .84 && age >= .48 && weight > 5 && weight <= 10) {
+    return (weight * .05)
+  }
+  else if (age < .46 && age >= .24 && weight >10 && weight <= 15) {
+    return (weight * .10)
+  }
+  
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -244,19 +246,34 @@ Using the grade function below do the following:
 
 
 
-function grade (score){
-  if (score => 90){
-    return "you got an A";
-  }if (score => 80){
-    return  "you got a B";
-  }if (score => 70){
-    return  "you got a C";
-  }if (score => 60){
-    return  "you got a D";
-  }else{
-    return  "you got an F"
+// function grade (score){
+//   if (score => 90){
+//     return "you got an A";
+//   }if (score => 80){
+//     return  "you got a B";
+//   }if (score => 70){
+//     return  "you got a C";
+//   }if (score => 60){
+//     return  "you got a D";
+//   }else{
+//     return  "you got an F"
+//   }
+// }
+
+let score = (Math.random()).tofixed(1)
+
+function grade (score) {
+  if (score <= 100 && score >= 90) {
+  return `you got an A`
+  }else if ( score < 90 && score >= 80) {
+    return `you got a B`
+  } else if ( score < 80 && score >= 70) {
+    return `you got a C`
+  } else if ( score < 70 && score >= 60) {
+    return `you got a D`
+  }else {
+    return `you got an F`
   }
-  // return score;
 }
 
 
