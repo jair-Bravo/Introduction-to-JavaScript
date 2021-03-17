@@ -77,7 +77,7 @@ Do the following:
 function dogYears(num1){
   return num1 * 7
 }
-console.log(dogYears(5));
+// console.log(dogYears(5));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -130,10 +130,7 @@ function hungryDog(weight, age){
   }else if (age > 7/12 && age < 1){
     return weight * x;
   }
-
-  console.log(hungryDog(15,1));
-
-
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -177,8 +174,7 @@ function game(user, computer){
     }else{
       return `you lose!`;
     }
-
-}
+  }
   
   console.log('task 4', game('rock', computer));
 
@@ -224,11 +220,10 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(startingNumber){
-      for (let i=startingNumber; i>=0; i)  {
-        console.log(`${i} bottles of soda on the wall, ${i} bottles of soda, take on down pass it around ${--i} bottles of soda on the wall`) 
-      return (`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${--i} bottles of soda on the wall`)
-      }
-  }
+  for (let i=0; i<startingNumber; i--)
+  return `${startingNumber} bottles of soda on the wall, ${startingNumber} bottles of soda, take one down pass it around ${startingNumber-1} bottles of soda on the wall`;
+}
+console.log(annoyingSong(5));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -239,34 +234,48 @@ Using the grade function below do the following:
   1. Receive a score out of 100 
   2. Return the corresponding letter grade following this grade scale:
 
-   90-100 should return 'you got an A' 
-   80-89 should return 'you got a B'
-   70-79 should return 'you got a C'
-   60-69 should return 'you got a D'
-   below should return 'you got an F'
+  90-100 should return 'you got an A' 
+  80-89 should return 'you got a B'
+  70-79 should return 'you got a C'
+  60-69 should return 'you got a D'
+  below should return 'you got an F'
 */
   
 
 
-  
+
+function grade (score){
+  if (score => 90){
+    return "you got an A";
+  }if (score => 80){
+    return  "you got a B";
+  }if (score => 70){
+    return  "you got a C";
+  }if (score => 60){
+    return  "you got a D";
+  }else{
+    return  "you got an F"
+  }
+  // return score;
+}
 
 
-function grade (Math.random() * 100){
-  if (grade => 90){
-    grade = 'you got an A';
-  }else if(grade => 80){
-    grade ='you got a B';
-  }else if(grade => 70){
-    grade ='you got a C';
-  }else if(grade => 60){
-    grade ='you got a D';
-  }else { 
-    grade ='you got an F';
-    return grade;
-  }
-  }
-  
-  
+
+
+// function grade(grade) {
+//   if (grade => 90){
+//     grade = 'you got an A';
+//   }else if(grade => 80){
+//     grade ='you got a B';
+//   }else if(grade => 70){
+//     grade ='you got a C';
+//   }else if(grade => 60){
+//     grade ='you got a D';
+//   }else { 
+//     grade ='you got an F';
+//     return grade;
+//   }
+// }
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
