@@ -258,13 +258,13 @@ let grade = (Math.random() * 100);
     grade ='you got a D';
   }else { 
     grade ='you got an F';
-    
+    return grade;
   }
-console.log(grade);
 
-function grade (/*Your Code here */){
-  /*Your Code here */
-  }
+
+// function grade (/*Your Code here */){
+//   /*Your Code here */
+//   }
   
   
 
