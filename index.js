@@ -247,7 +247,11 @@ Using the grade function below do the following:
 */
   
 
-let grade = (Math.random() * 100);
+
+  
+
+
+function grade (Math.random() * 100){
   if (grade => 90){
     grade = 'you got an A';
   }else if(grade => 80){
@@ -260,11 +264,7 @@ let grade = (Math.random() * 100);
     grade ='you got an F';
     return grade;
   }
-
-
-// function grade (/*Your Code here */){
-//   /*Your Code here */
-//   }
+  }
   
   
 
